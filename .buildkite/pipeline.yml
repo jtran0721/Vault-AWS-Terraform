@@ -20,6 +20,3 @@ steps:
     command: ./auto/terraform-destroy
     agents:
       queue: default
-    if: |
-      build.message == "Destroy Vault Infrastructure"
-      build.branch == "main"
