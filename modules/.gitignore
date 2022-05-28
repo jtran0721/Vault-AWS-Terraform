@@ -8,3 +8,5 @@
 
 # Crash log files
 *.log
+
+.DS_Store

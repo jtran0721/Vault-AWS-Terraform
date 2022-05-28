@@ -156,7 +156,7 @@ resource "aws_kms_key" "unseal_key"{
 }
 
 resource "aws_kms_alias" "kms_key" {
-  name          = "alias/VAULT_AUTO_UNSEAL_KEY"
+  name          = "alias/VAULT_KEY"
   target_key_id = aws_kms_key.unseal_key.id
 }
 // CREATE AND ATTACH THE POLICY TO THE IAM ROLE
