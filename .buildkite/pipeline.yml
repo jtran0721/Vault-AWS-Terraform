@@ -5,17 +5,17 @@ steps:
     agents:
       queue: default
 
-  - wait
+  - block: ":rocket: Deploy to PROD?"
+    branches: main
 
   - name: ":terraform: Deploy to prod"
     command: ./auto/terraform-apply
     agents:
       queue: default
-
+      
+  - block: ":rocket: Destroy Infrastructure? "
+    branches: master
   - name: :terraform: Destroy build on demand"
     command: ./auto/terraform-destroy
     agents:
       queue: default
-    if: |
-      build.mesage == "Destroy Vault Infrastructure"
-      build.branch == "main"
