@@ -2,4 +2,14 @@
 
 cd $(dirname $0)/..
 
+echo "+++ Terraform Plan"
+
+set +e
+
+terraform init
+
+sleep 2
+
 terraform apply
+
+set -echo
