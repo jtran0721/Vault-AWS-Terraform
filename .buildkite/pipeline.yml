@@ -5,5 +5,5 @@ steps:
   - wait
 
   name: "Deploy to prod"
-  branches: "!master"
+  branches: "!main"
   command: ./auto/apply
