@@ -1,9 +1,10 @@
 #! /bin/bash -e
 
 set -euo pipefail
-cd "$(dirname "${BASH_SOURCE[0]}")/.."
+cd $(dirname $0)/..
 
 pwd
+
 echo "+++ Terraform Plan"
 
 set +e 
