@@ -1,7 +1,13 @@
 #! /bin/bash -e
 
-cd $(dirname $0)/..
+set -euo pipefail
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
-terraform init
+echo "+++ Terraform Plan"
+
+set +e 
 
 terraform plan
+
+set -echo
+echo "+++ Terraform plan return code"
