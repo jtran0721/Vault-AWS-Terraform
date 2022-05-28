@@ -1,13 +1,13 @@
 steps:
 
   - name: ":terraform: Running terraform plan"
-    command: ./auto/plan
+    command: ./auto/terraform-plan
     agents:
       queue: default
 
   - wait
 
   - name: ":terraform: Deploy to prod"
-    command: ./auto/apply
+    command: ./auto/terraform-apply
     agents:
       queue: default
