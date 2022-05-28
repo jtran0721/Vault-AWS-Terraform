@@ -8,6 +8,10 @@ echo "+++ Terraform Plan"
 
 set +e 
 
+terraform init
+
+sleep 5
+
 terraform plan
 
 set -echo
