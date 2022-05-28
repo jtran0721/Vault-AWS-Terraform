@@ -15,7 +15,8 @@ steps:
       
   - block: ":rocket: Destroy Infrastructure? "
     branches: master
-  - name: :terraform: Destroy build on demand"
+
+  - name: ":terraform: Destroy build on demand"
     command: ./auto/terraform-destroy
     agents:
       queue: default
