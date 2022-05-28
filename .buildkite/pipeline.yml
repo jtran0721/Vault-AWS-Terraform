@@ -1,0 +1,9 @@
+steps:
+  name: "Running terraform plan"
+  command: ./auto/plan
+
+  - wait
+
+  name: "Deploy to prod"
+  branches: "!master"
+  command: ./auto/apply
