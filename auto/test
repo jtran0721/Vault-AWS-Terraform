@@ -1,5 +1,7 @@
 #! /bin/bash -e
 
+cd $(dirname $0)/..
+
 echo "Test command"
 
 aws cloudformation describe-stacks --stack-name vault-deployment --region ap-southeast-2
