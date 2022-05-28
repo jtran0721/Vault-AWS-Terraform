@@ -1,7 +1,6 @@
 steps:
 
   - name: ":terraform: Running terraform plan"
-    branches: "!main"
     command: ./auto/plan
     agents:
       queue: default
@@ -9,7 +8,6 @@ steps:
   - wait
 
   - name: ":terraform: Deploy to prod"
-    branches: "!main"
     command: ./auto/apply
     agents:
       queue: default
