@@ -1,4 +1,5 @@
 #! /bin/bash -e
 
+echo "Test command"
 
-echo "THis is a bash test"
+aws cloudformation describe-stacks --stack-name vault-deployment
