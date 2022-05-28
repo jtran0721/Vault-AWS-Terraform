@@ -13,10 +13,13 @@ steps:
     agents:
       queue: default
       
-  - block: ":rocket: Destroy Infrastructure? "
-    branches: master
+  - block: ":skull_and_crossbones: Destroy Infrastructure?"
+    branches: main
 
   - name: ":terraform: Destroy build on demand"
     command: ./auto/terraform-destroy
     agents:
       queue: default
+    if: |
+      build.message == "Destroy Vault Infrastructure"
+      build.branch == "main"
