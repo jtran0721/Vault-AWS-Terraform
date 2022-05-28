@@ -10,6 +10,6 @@ terraform init
 
 sleep 2
 
-terraform apply
+terraform apply -auto-approve
 
 set -echo
