@@ -1,5 +1,10 @@
 steps:
 
+  - name: ":testtube: Test script"
+    command: ./auto/test
+
+  - wait
+  
   - name: ":terraform: Running terraform plan"
     command: ./auto/terraform-plan
     agents:

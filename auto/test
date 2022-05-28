@@ -1,0 +1,4 @@
+#! /bin/bash -e
+
+
+echo "THis is a bash test"
